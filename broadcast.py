@@ -53,7 +53,7 @@ async def broadcast(session, text, time):
                         await asycio.sleep(x.value)
                     except:
                         pass
-                await asyncio.sleep(int(time))
+           	await asyncio.sleep(int(time))
     return "Done ✅"
           
              	    
