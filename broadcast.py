@@ -28,15 +28,21 @@ async def broadcast(session, text, time):
            print(list)
            while True:
            	for i in list:
-           		await owo.send_message(int(i), text)
-           		if i < 25:
-           			await asyncio.sleep(1)
-           		if i < 50 and i > 25:
-           			await asyncio.sleep(2)
-           		if i < 100 and i > 50:
-           			await asyncio.sleep(5)
-           		if i < 200 and i > 100:
-           			await asyncio.sleep(10)
+			try:
+				await owo.send_message(int(i), text)
+           		        if i < 25:
+					await asyncio.sleep(1)
+           		        if i < 50 and i > 25:
+           			        await asyncio.sleep(2)
+           		        if i < 100 and i > 50:
+           			        await asyncio.sleep(5)
+           		        if i < 200 and i > 100:
+           			        await asyncio.sleep(10)
+			except FloodWait as x:
+				print(f"Flood Wait Second of : {x.value}")
+				await asycio.sleep(x.value)
+			except:
+				pass
            	await asyncio.sleep(int(time))
           
              	    
