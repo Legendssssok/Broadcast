@@ -60,14 +60,14 @@ async def broadcast(session, text, time):
               
 @app.on_message(filters.command("bc"))
 async def bc(client, message):
-	chat_id = message.chat.id
-	print(message.chat.id)
-	my_session = await client.ask(chat_id, "Give String Session")
-	text = await client.ask(chat_id, "Give me text")
-	time = await client.ask(chat_id, "Give me time in secon")
-	await message.reply_text("Processing....")
-	lol = await broadcast(my_session.text, text.text, time.text)
-        await message.reply_text(f"{lol}")
+    chat_id = message.chat.id
+    print(message.chat.id)
+    my_session = await client.ask(chat_id, "Give String Session")
+    text = await client.ask(chat_id, "Give me text")
+    time = await client.ask(chat_id, "Give me time in secon")
+    await message.reply_text("Processing....")
+    lol = await broadcast(my_session.text, text.text, time.text)
+    await message.reply_text(f"{lol}")
 
 
 app.run()
