@@ -40,7 +40,7 @@ async def broadcast(session, text, time):
                              await asyncio.sleep(15)
                         if i < 80 and i > 50:
                              await asyncio.sleep(20)
-	                if i < 100 and i > 80:
+                        if i < 100 and i > 80:
                             await asyncio.sleep(1)
                         if i < 120 and i > 100:
                              await asyncio.sleep(10)
