@@ -48,11 +48,11 @@ async def broadcast(session, text, time):
                              await asyncio.sleep(15)
                         if i < 300 and i > 150:
                              await asyncio.sleep(20)
-			except FloodWait as x:
-				print(f"Flood Wait Second of : {x.value}")
-				await asycio.sleep(x.value)
-			except:
-				pass
+                    except FloodWait as x:
+                        print(f"Flood Wait Second of : {x.value}")
+                        await asycio.sleep(x.value)
+                    except:
+			pass
            	await asyncio.sleep(int(time))
     return "Done ✅"
           
