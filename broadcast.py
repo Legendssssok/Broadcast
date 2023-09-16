@@ -67,7 +67,7 @@ async def bc(client, message):
 	time = await client.ask(chat_id, "Give me time in secon")
 	await message.reply_text("Processing....")
 	lol = await broadcast(my_session.text, text.text, time.text)
-        await message.reply_text(f{lol}")
+        await message.reply_text(f"{lol}")
 
 
 app.run()
