@@ -52,8 +52,8 @@ async def broadcast(session, text, time):
                         print(f"Flood Wait Second of : {x.value}")
                         await asycio.sleep(x.value)
                     except:
-			pass
-           	await asyncio.sleep(int(time))
+                        pass
+                await asyncio.sleep(int(time))
     return "Done ✅"
           
              	    
